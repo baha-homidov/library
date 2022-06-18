@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #336679;
+    min-height: 98vh;
+    min-width: 320px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template: 1fr 1fr;
+    background-color: #0A233E;
+    padding: 20px;
+}
+
+.header>.title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 10px;
+    padding-top: 0;
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    justify-self: center;
+}
+
+
+.book-grid {
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.add-book {
+    margin-right: auto;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.clear-library {
+    margin-left: auto;
+    grid-row: 2/ 3;
+    grid-column: 2 /3;
+}
+
+
+
+.book-entry {
+    min-width: 300px;
+    font-weight: 700;
+    color: white;
+    background-color: #0D8546;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.book-entry>.title {
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.book-entry>.by {
+    color: rgb(230, 230, 230);
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.book-entry>.author {
+    color: rgb(230, 230, 230);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.book-entry>.pages {
+    font-size: 1.2rem;
+
+}
+
+.is-read {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.is-read,
+.pages {
+    text-align: center;
+}
+
+.is-read>.text {
+    font-size: 1.3rem;
+}
+
+
+button {
+    color: #09233E;
+    font-weight: 700;
+    font-size: 1rem;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #2E9C65;
+}
+
+.delete:hover, .add-book:hover, .clear-library:hover, .submit:hover {
+    background-color: #3dca84;;
+}
+
+.delete:active, .add-book:active, .clear-library:active {
+    background-color: rgb(218, 218, 218);
+}
+
+.add-book-window {
+
+    position: absolute;
+    border: 1px solid red;
+    background-color: #6d8e9b;
+    max-width: 400px;
+    min-width: 320px;
+    align-self: center;
+    margin-top: 30vh;
+}
+
+
+
+
+
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #efefef;
+    text-align: center;
+}
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
