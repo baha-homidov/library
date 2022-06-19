@@ -57,7 +57,9 @@
 
 
 .book-entry {
+
     min-width: 300px;
+    max-width: 300px;
     font-weight: 700;
     color: white;
     background-color: #0D8546;
@@ -65,13 +67,19 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+
     gap: 10px;
 
 }
 
 .book-entry>.title {
     font-size: 2.3rem;
+    justify-self: center;
+    overflow-wrap: break-word;
+    flex-wrap: wrap;
     text-align: center;
+    
 }
 
 .book-entry>.by {
@@ -118,17 +126,28 @@ button {
     background-color: #2E9C65;
 }
 
-.delete:hover, .add-book:hover, .clear-library:hover, .submit:hover {
-    background-color: #3dca84;;
+.book-entry > button {
+    margin-top: auto;
 }
 
-.delete:active, .add-book:active, .clear-library:active, .submit:active {
+.delete:hover,
+.add-book:hover,
+.clear-library:hover,
+.submit:hover {
+    background-color: #3dca84;
+    ;
+}
+
+.delete:active,
+.add-book:active,
+.clear-library:active,
+.submit:active {
     background-color: rgb(218, 218, 218);
 }
 
 .add-book-window {
     box-shadow: 4px 4px 10px rgb(42, 42, 42);
-    
+
     position: absolute;
 
     border-radius: 15px;
@@ -146,7 +165,7 @@ form {
     gap: 10px;
 }
 
-form > legend {
+form>legend {
     font-size: 1.5rem;
     align-self: center;
     font-weight: 700;
@@ -177,7 +196,7 @@ label {
 
 
 
-.is-read-add > .text {
+.is-read-add>.text {
     margin-bottom: 10px;
     font-size: 1.5rem;
     color: white;

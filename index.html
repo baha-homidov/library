@@ -21,39 +21,52 @@
         <div class="body">
             <div class="book-grid">
 
+                <!-- <div class="book-entry">
+                    <div class="title">1984</div>
+                    <div class="by">by</div>
+                    <div class="author">George Orwell</div>
+                    <div class="pages">Pages: 222</div>
+                    <div class="is-read">
+                        <span class="text">Has been read</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <button class="delete">Delete book</button>
+                </div> -->
 
-                
-                
-                
+
+
 
             </div>
 
-        </form>
-    </div>
-    <div class="add-book-window hide">
-        <form type="submit" onsubmit="addBookToLibrary()" action="javascript:void(0);">
-            <legend>Add a book</legend>
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" required>
-        
-        <label for="author">Author</label>
-        <input type="text" name="author" id="author" required>
-        
-        <label for="page-num">Pages</label>
-        <input type="number" name="pageNum" min="1" id="page-num" required>
-        
-        
-
-        
-        <div class="is-read-add">
-            <div class="text">Has been is-read</div>
-            <label class="switch">
-                <input type="checkbox" class="add-is-read">
-                <span class="slider round"></span>
-            </label>
+            </form>
         </div>
-        <button type="submit" class="submit">Add entry</button>
-    </form>
+        <div class="add-book-window hide">
+            <form type="submit" onsubmit="addBookToLibrary()" action="javascript:void(0);">
+                <legend>Add a book</legend>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required>
+
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" required>
+
+                <label for="page-num">Pages</label>
+                <input type="number" name="pageNum" min="1" id="page-num" required>
+
+
+
+
+                <div class="is-read-add">
+                    <div class="text">Has been is-read</div>
+                    <label class="switch">
+                        <input type="checkbox" class="add-is-read">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <button type="submit" class="submit">Add entry</button>
+            </form>
         </div>
     </div>
 </body>
