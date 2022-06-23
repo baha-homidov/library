@@ -15,13 +15,17 @@ clearLiraryButton.addEventListener('click', () => {
 })
 
 
-
-function Book(title, author, pageNum, isRead) {
-    this.title = title;
-    this.author = author;
-    this.pageNum = pageNum;
-    this.isRead = Boolean(isRead);
+class Book {
+    constructor(title, author, pageNum, isRead) {
+        this.title = title;
+        this.author = author;
+        this.pageNum = pageNum;
+        this.isRead = Boolean(isRead);
+    }
 }
+
+
+
 
 let myLibrary = [];
 
